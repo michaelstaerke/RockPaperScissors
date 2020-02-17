@@ -5,6 +5,7 @@ int main()
 {
     int pc_score = 0;
     int pl_score = 0;
+    int bestof;
 
     // normal mode
     const int rock = 1;
@@ -18,18 +19,55 @@ int main()
 
 /* Start Questions */
 
-    printf("Welcome to RockPaperScissors!");
+    printf("Welcome to RockPaperScissors! \n\n");
 
-    printf("Choose normal mode 'nm' or advanced mode 'am' (type in the command line 'nm' or 'am'):");
+    printf("Choose normal mode '1' or 
+            advanced mode '2' (type in the command line '1' or '2'): \n");
+
         /* game mode scan */
-        if (scanf("%d%d", &nm, &am) )
-        const char *mode[] = {"nm", "am"};
+        int m;
+        if (scanf("%d%d", &m) < 2 && &m > 0)
         {
-            fprintf(stderr, "Eingabefehler !\n");
-        } 
+            fprintf(stderr, "Wrong input! \n");
+            return 1;
+        }
+        else if (m = 2)
+        {
+            const int mode = 2;
+            printf("advanced mode selected! \n");
+        }
+        else 
+        {
+            const int mode = 1;
+            printf("normal mode selected! \n");
+        }
 
-    printf("Now choose if you want to have a best of one / three / five / seven or nine (type in the command line '1' / '3' / .. ):");
+    printf("Now choose if you want to have a best of 
+            one / three / five / seven or nine (type in the command line '1' / '3' / .. ): \n");
+        
         /* best of scan */
+        int b;
+        if (scanf("%d", &b) > 0  &&  &b < <= 10)
+        {
+            b = 0;
+        }
+        switch (b) 
+        {
+            case 1:
+                const int bestof = 1;
+                break;
+            case 3:
+                const int bestof = 3;
+                break;
+            case 5:
+                const int bestof = 5;
+            case 7: 
+                const int bestof = 7;
+            case 9: 
+                const int bestof = 9;
+            default: 
+                fprintf(stderr, "Wrong Input! \n");
+        }
 
 
 /* Game Start */
