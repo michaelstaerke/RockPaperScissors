@@ -1,10 +1,12 @@
 #include <stdio.h>      // Standard IO
 #include <stdlib.h>     
 
-int main()
+int main(void)
 {
     int pc_score = 0;
     int pl_score = 0;
+    
+    int mode;
     int bestof;
 
     // normal mode
@@ -20,17 +22,19 @@ int main()
 /* Start Questions */
 
     printf("Welcome to RockPaperScissors! \n\n");
+    
 
     printf("Choose normal mode '1' or advanced mode '2' (type in the command line '1' or '2'): \n");
 
-        /* game mode scan */
+        /* game mode - scan */
         int m;
-        if (scanf("%d%d", &m) < 2 && &m > 0)
+        if (scanf("%d", &m) > 2 && &m < 1)
         {
             fprintf(stderr, "Wrong input! \n");
-            return 1;
+            // exit(EXIT_FAILURE);
+            // printf(m);
         }
-        else if (m = 2)
+        else if (m == 2)
         {
             const int mode = 2;
             printf("advanced mode selected! \n");
@@ -41,14 +45,16 @@ int main()
             printf("normal mode selected! \n");
         }
 
+
     printf("Now choose if you want to have a best of one / three / five / seven or nine (type in the command line '1' / '3' / .. ): \n");
         
-        /* best of scan */
+        /* best of - scan 
         int b;
-        if (scanf("%d", &b) > 0  &&  &b < <= 10)
+        if (scanf("%d%d", &b) > 0  &&  &b <= 10)
         {
             b = 0;
         }
+        
         switch (b) 
         {
             case 1:
@@ -69,7 +75,7 @@ int main()
             default: 
                 fprintf(stderr, "Wrong Input! \n");
         }
-
+    */
 
 /* Game Start */
 
