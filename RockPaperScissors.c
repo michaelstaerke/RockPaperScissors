@@ -1,4 +1,4 @@
-#include <stdio.h>      //Standard IO
+#include <stdio.h>      // Standard IO
 #include <stdlib.h>     
 
 int main()
@@ -21,8 +21,7 @@ int main()
 
     printf("Welcome to RockPaperScissors! \n\n");
 
-    printf("Choose normal mode '1' or 
-            advanced mode '2' (type in the command line '1' or '2'): \n");
+    printf("Choose normal mode '1' or advanced mode '2' (type in the command line '1' or '2'): \n");
 
         /* game mode scan */
         int m;
@@ -42,8 +41,7 @@ int main()
             printf("normal mode selected! \n");
         }
 
-    printf("Now choose if you want to have a best of 
-            one / three / five / seven or nine (type in the command line '1' / '3' / .. ): \n");
+    printf("Now choose if you want to have a best of one / three / five / seven or nine (type in the command line '1' / '3' / .. ): \n");
         
         /* best of scan */
         int b;
@@ -61,10 +59,13 @@ int main()
                 break;
             case 5:
                 const int bestof = 5;
+                break;
             case 7: 
                 const int bestof = 7;
+                break;
             case 9: 
                 const int bestof = 9;
+                break;
             default: 
                 fprintf(stderr, "Wrong Input! \n");
         }
