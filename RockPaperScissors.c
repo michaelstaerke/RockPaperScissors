@@ -21,36 +21,41 @@ int main(void)
 
 /* Start Questions */
 
-    printf("Welcome to RockPaperScissors! \n\n");
-    
+    printf("\n\n\n");
+    printf("++++++++++++++++++++++++++++++++++\n");
+    printf("+ Welcome to RockPaperScissors ! +\n");
+    printf("++++++++++++++++++++++++++++++++++\n");
+    printf("\n\n");
 
-    printf("Choose normal mode '1' or advanced mode '2' (type in the command line '1' or '2'): \n");
-
+    printf(">> Select a game mode:\n");
+    printf(">> Choose normal mode '1' or advanced mode '2'  || Type in the command line '1' or '2'||: \n");
+        
         /* game mode - scan */
-        int m;
-        if (scanf("%d", &m) > 2 && &m < 1)
+
+        enum gameMode { nM = 1, aM = 2 };
+
+        int modeUserInput;
+        if (scanf("%d", &modeUserInput) != nM | aM)
         {
-            fprintf(stderr, "Wrong input! \n");
-            // exit(EXIT_FAILURE);
-            // printf(m);
+            fprintf(stderr, ">> Wrong input, try again! \n\n");
         }
-        else if (m == 2)
+        else if (modeUserInput == 2)
         {
-            const int mode = 2;
-            printf("advanced mode selected! \n");
+            const int selectedMode = 2;
+            printf(">> Advanced mode selected! \n\n");
         }
         else 
         {
-            const int mode = 1;
-            printf("normal mode selected! \n");
+            const int selectedMode = 1;
+            printf(">> Normal mode selected! \n\n");
         }
 
 
-    printf("Now choose if you want to have a best of one / three / five / seven or nine (type in the command line '1' / '3' / .. ): \n");
+    printf(">> Now choose if you want to have a best of one / three / five / seven or nine (type in the command line '1' / '3' / .. ): \n");
         
         /* best of - scan 
         int b;
-        if (scanf("%d%d", &b) > 0  &&  &b <= 10)
+        if (scanf("%d", &b) > 0  &&  &b <= 10)
         {
             b = 0;
         }
@@ -75,7 +80,8 @@ int main(void)
             default: 
                 fprintf(stderr, "Wrong Input! \n");
         }
-    */
+        */
+
 
 /* Game Start */
 
